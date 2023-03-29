@@ -1,0 +1,379 @@
+/* 사용할 폰트 */
+@font-face {
+    font-family: 'establishRetrosansOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{background-color: rgba(0, 0, 0, 0.8);}
+
+/* 태그 이름을 통한 css 디자인 */
+h1{
+    font-size: 2rem;
+}
+
+section{
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* 클래스 이름을 통한 css 디자인 */
+/* header의 nav */
+.header{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: fixed;
+    color: white;
+    z-index: 10;
+}
+
+.header>.nav{
+    max-width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.header>.nav .logo{
+    width: 210px;
+    margin-left: 0;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'PyeongChangPeace-Light';
+}
+
+.header>.nav>.menu{
+    list-style: none;
+    display: flex;
+    margin-right: 50px;
+    width: 300px;
+    justify-content: space-around;
+}
+
+.header>.nav>.menu a{
+    font-family: 'establishRetrosansOTF';
+    font-size: 1.5rem;
+}
+
+.header>.nav>.menu a:hover{
+    color: #e6a3ff;
+}
+
+.header>.nav>.menu a::after{
+    content: "";
+    display: inline-block;
+    width: 0px;
+    height: 4px;
+    background-color: #e95996;
+    position: absolute;
+    bottom: 30px;
+    margin-left: -100px;
+}
+
+.header>.nav>.menu a:hover:after{
+    transition: all 0.5s;
+    width: 105px;
+}
+
+/* main */
+/* section 부분을 찾기 힘들 것 같다면 main 안에 두어도 상관 없음 */
+.main{}
+
+/* section 多 → section 단위로 접근 */
+/* section1 행사 이름 */
+.section1-wrap{
+    width: 100%;
+    min-height: 400px;
+    height: 1000px;
+    background-image: url(../img/festival.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section1-wrap>.section1-title{
+    padding: 470px 20px;
+    color: white;
+}
+
+.section1-wrap>.poster{
+    background-image: url(../img/poster.png);
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    right :70px;
+    margin-top: -900px;
+    background-size: cover;
+}
+
+.section1-wrap>.section1-title>h1{
+    font-family: 'twaysky';
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section1-wrap>.section1-title>h3{
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* section2 행사 설명 */
+.section2-intro{
+    font-family: 'NanumSquareNeo-Variable';
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 40px 0;
+    line-height: 160%;
+}
+
+.section2-intro>.intro-title{
+    margin-bottom: 50px;
+}
+
+.section2-intro>.intro-title>h1{
+    background-color: #2e3192;
+    font-family: 'twaysky';
+    margin-bottom: 30px;
+    width: 100%;
+    height: 50px;
+    line-height: 60px;
+}
+
+.section2-intro>.intro-title>h3{
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 1.5rem;
+    line-height: 40px;
+}
+
+.section2-intro>.intro-detail>table{
+    line-height: 35px;
+    font-size: 1.3rem;
+    margin-top: 50px;
+    margin: auto;
+}
+
+.section2-intro>.intro-detail>table td:first-child{
+    padding: 5px 10px;
+    border-right: #7174d4 2px solid;
+    padding-right: 50px;
+}
+
+.section2-intro>.intro-detail>table td:nth-child(2){
+    text-align: left;
+    padding-left: 50px;
+}
+
+/* section3 행사 이미지 */
+.section3-wrap>.section3-gallery>.gallery-title{
+    color: white;
+    font-family: 'twaysky';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.section3-wrap>.section3-gallery>.gallery-title>a{
+    background-color: #2e3192;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: white solid 4px;
+}
+
+.section3-wrap>.section3-gallery>.gallery-title>a:hover{
+    background-color: #e95996;
+    transition: all 0.3s;
+}
+
+.section3-gallery>.gallery-board-wrap{
+    display: flex;
+    justify-content: space-around;
+}
+
+.section3-wrap>.section3-gallery .gallery-board{
+    display: inline-block;
+    width: 280px;
+    height: 350px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.section3-wrap>.section3-gallery .gallery-board:nth-child(1)>.image{
+    margin: 15px;
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    background-image: url(../img/festival.jpg);
+}
+
+.section3-wrap>.section3-gallery .gallery-board:nth-child(2)>.image{
+    margin: 15px;
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    background-image: url(../img/festival.jpg);
+}
+
+.section3-wrap>.section3-gallery .gallery-board:nth-child(3)>.image{
+    margin: 15px;
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    background-image: url(../img/festival.jpg);
+}
+
+/* section4 행사 뉴스 */
+.section4-news{
+    color: white;
+    padding: 100px 0;
+    margin-top: 80px;
+    height: 350px;
+}
+
+.section4-news>h1{
+    font-family: 'twaysky';
+    margin-bottom: 40px;
+}
+
+.section4-news>table{
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 1.2rem;
+}
+
+.section4-news>table{
+    width: 80%;
+    margin: auto;
+}
+
+.section4-news>table td:first-child{
+    color: rgb(75, 52, 224);
+    font-weight: bolder;
+    padding-right: 50px;
+}
+
+.section4-news>table td{
+    padding: 10px 0;
+    border-top: solid 2px rgb(75, 52, 224);
+    border-bottom: solid 2px rgb(75, 52, 224);
+}
+
+/* footer */
+.footer{
+    background-color: ivory
+}
+
+.footer>.footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer>.footer-content>.footer-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer>.footer-content>.footer-info>p{
+    padding-right: 50px;
+}
+
+/* TOP 버튼 */
+.top-button{
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: #2e3192;
+    border-radius: 50%;
+    border: white 5px solid;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.top-button>a{
+    font-family: 'twaysky';
+}
+
+.top-button:hover{
+    background-color: #e95996;
+    transition: all 0.3s;
+}
+
+/* nav 모바일 버튼 */
+.nav>.mobile-button{
+    display: none;
+    background-image: url(../img/bars-solid.svg);
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* 미디어 쿼리: nav */
+@media screen and (max-width: 767px) {
+    .header{background-color: rgba(236, 92, 153, 0.7);}
+    .nav>.mobile-button{
+        display: inline-block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+
+    .nav>.menu{
+        flex-direction: column;
+        height: 60px;
+    }
+
+    .nav>.menu>li{
+        display: none;
+    }
+
+    .nav>.mobile-button:hover+.menu, .nav>.menu:hover{
+        height: 100vh;
+    }
+
+    .nav>.mobile-button:hover+.menu>li, .nav>.menu:hover>li{
+        display: inline-block;
+    }
+}

@@ -1,0 +1,12 @@
+/* 
+margin과 padding 값은 각각의 태그 안에 넣어 줄 수도 있지만
+따로 css에 작성하고, html에 클래스를 추가하는 방식으로 작성할 수도 있음
+*/
+
+.m-all{
+    margin: 10px;
+}
+
+.m-all-2{
+    margin: 20px;
+}

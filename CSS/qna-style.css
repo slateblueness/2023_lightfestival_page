@@ -1,0 +1,59 @@
+/*qna.html 의 css디자인*/
+/*main-qna*/
+.main-qna{
+    color: white;
+}
+
+.section-qna { 
+    padding-top: 120px; 
+    padding-bottom: 60px;
+    text-align: center;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 1.1rem;
+}
+
+.section-qna>h1{
+    padding-bottom: 20px;
+    font-family: 'twaysky';
+}
+
+.section-qna>form label {
+    display: inline-block;
+    width: 90px;
+}
+.section-qna>form input[type="text"] {
+    width: 200px;
+}
+.section-qna>form textarea {
+    width: 290px;
+}
+.section-qna>form>div { margin-bottom: 5px;}
+
+.section-qna>form>.qna-button {
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+.section-qna>form input[type="checkbox"] {
+    float: left;
+}
+.section-qna>form span {
+    float: left;
+}
+.section-qna>form input[type="submit"] {
+    float: right;
+    width: 120px;
+}
+
+/* 개인정보제공 동의에 체크하면 버튼 배경색 변경*/
+.qna-button>input[type="submit"] {
+    background-color: white;
+    border-radius: 10px;
+    border: #2D3192 2px solid;
+    color: #2D3192;
+}
+.qna-button>input[type="checkbox"]:checked~input[type="submit"] {
+    background-color: #2D3192;
+    color: white;
+    border: white 2px solid;
+}
